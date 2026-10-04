@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Special Offer - Claim Now!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            margin: auto;
+        }
+        .badge {
+            background-color: #28a745;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .coin-img {
+            width: 90px;
+            height: 90px;
+            margin: 15px auto;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #b8860b;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 14px;
+            color: #dcdcdc;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .timer-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #ff4757;
+            font-weight: bold;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+        }
+        .note {
+            margin-top: 15px;
+            font-size: 11px;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="badge">Limited Time Offer</span>
+        <div class="coin-img">$</div>
+        <h1>CONGRATULATIONS!</h1>
+        <p>You have been selected to claim a special reward. Click the button below to complete your registration and claim your bonus!</p>
+        
+        <div class="timer-box">
+            ⏰ Offer expires in: <span id="timer">01:00</span>
+        </div>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2484947&id=74386" class="btn">
+            CLAIM SPECIAL OFFER NOW
+        </a>
+
+        <p class="note">*Valid for Android users in Pakistan only.</p>
+    </div>
+
+    <script>
+        let time = 60;
+        const timerElement = document.getElementById('timer');
+        
+        setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            
+            if(time > 0) {
+                timerElement.innerHTML = `${minutes}:${seconds}`;
+                time--;
+            } else {
+                timerElement.innerHTML = "00:00";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
